@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Haven | Your Online Bookstore</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+  body { background: #f4f6fb; scroll-behavior: smooth; color: #333; }
+
+  /* NAVBAR */
+  .navbar {
+    position: sticky; top: 0; z-index: 1000;
+    background: #1f3cff; color: white;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 30px;
+  }
+  .navbar a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
+  .navbar a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .hero {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+      url('https://images.unsplash.com/photo-1512820790803-83ca734da794') center/cover;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: white; text-align: center; padding: 0 20px;
+  }
+  .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+  .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+  .hero button {
+    padding: 12px 25px;
+    background: #ffcc00; border: none; border-radius: 6px;
+    font-weight: bold; cursor: pointer;
+  }
+
+  /* SECTIONS */
+  section { padding: 50px 30px; }
+  h2 { text-align: center; margin-bottom: 30px; }
+
+  /* COLUMNS */
+  .columns { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+  .column { flex: 1 1 200px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,.1); text-align: center; }
+  .column img { width: 100%; border-radius: 8px; }
+
+  /* CATEGORIES */
+  .category-box { flex: 1 1 250px; background: #fff; padding: 25px; border-radius: 10px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .category-box:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .learn-btn { margin-top: 15px; padding: 8px 15px; background: #1f3cff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+  .learn-btn:hover { background: #1526a3; }
+
+  /* CONTACT */
+  .contact-form { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,.1); }
+  .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+  .contact-form button { background: #1f3cff; color: white; border: none; padding: 10px; border-radius: 5px; width: 100%; cursor: pointer; }
+
+  /* FOOTER */
+  footer { background: #111; color: white; text-align: center; padding: 25px; }
+  footer a { color: #4da3ff; margin: 0 12px; cursor: pointer; }
+
+  /* RESPONSIVE */
+  @media(max-width: 768px){ .hero h1 { font-size: 2rem; } }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div><b>Book Haven</b></div>
+  <div>
+    <a href="#popular">Popular</a>
+    <a href="#categories">Categories</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Discover Your Next Favorite Book</h1>
+  <p>From fantasy to motivation, explore books you'll love</p>
+  <button onclick="alert('Start exploring our collection!')">Browse Now</button>
+</div>
+
+<!-- POPULAR BOOKS -->
+<section id="popular">
+  <h2>Popular Books</h2>
+  <div class="columns">
+    <div class="column">
+      <img src="harryPotter.jpg" alt="Harry Potter">
+      <h3>Harry Potter</h3>
+      <p>Join Harry in the magical world of Hogwarts.</p>
+    </div>
+    <div class="column">
+      <img src="ps.jpg" alt="Ponniyin Selvan">
+      <h3>Ponniyin Selvan</h3>
+      <p>An epic historical novel by Kalki Krishnamurthy.</p>
+    </div>
+    <div class="column">
+      <img src="udayar.jpg" alt="Udayar">
+      <h3>Udayar</h3>
+      <p>A gripping historical novel set in Chola period.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK CATEGORIES -->
+<section id="categories">
+  <h2>Explore By Categories</h2>
+  <div class="columns">
+    <div class="category-box">
+      📚 Kids Books
+      <p class="feature-summary">Stories that ignite imagination and fun.</p>
+      <div class="feature-content" style="display:none;">
+        <p>Includes classic fairy tales, picture books, and adventure stories for children.</p>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Kids Books" style="width:100%; border-radius:8px; margin-top:10px;">
+      </div>
+      <button class="learn-btn">Learn More</button>
+    </div>
+    <div class="category-box">
+      💡 Self-Help
+      <p class="feature-summary">Books to improve yourself and your habits.</p>
+      <div class="feature-content" style="display:none;">
+        <p>Learn techniques for productivity, mindfulness, and personal growth.</p>
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Self Help Books" style="width:100%; border-radius:8px; margin-top:10px;">
+      </div>
+      <button class="learn-btn">Learn More</button>
+    </div>
+    <div class="category-box">
+      🚀 Motivation & Inspiration
+      <p class="feature-summary">Books to ignite your passion and goals.</p>
+      <div class="feature-content" style="display:none;">
+        <p>Stories and guides to motivate, inspire, and push you forward.</p>
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Motivation Books" style="width:100%; border-radius:8px; margin-top:10px;">
+      </div>
+      <button class="learn-btn">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.learn-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.previousElementSibling;
+      if(content.style.display === 'none') {
+        content.style.display = 'block';
+        btn.textContent = 'Show Less';
+      } else {
+        content.style.display = 'none';
+        btn.textContent = 'Learn More';
+      }
+    });
+  });
+</script>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-form">
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2025 Book Haven | 
+  <a onclick="alert('About Us: Your online bookstore for all genres.')">About Us</a>
+  <a onclick="alert('Contact: info@bookhaven.com')">Contact</a>
+</footer>
+</body>
+</html>
