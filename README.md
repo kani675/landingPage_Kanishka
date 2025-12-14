@@ -1,4 +1,2 @@
-Landing Page for a Bookseller Website
-
-A responsive landing page designed for an online bookselling platform.
-Built using HTML and CSS.
+# Landing Page – Bookseller Website
+A simple and responsive landing page created using HTML and CSS.
